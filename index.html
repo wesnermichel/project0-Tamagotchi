@@ -5,25 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Tamagotchi Game Javascript Game</title>
+    <title>Tamagotchi Game : Javascript Style</title>
     <!-- title that comes on browser -->
   </head>
   <body>
-    <h2>Welcome, to Tamagotchi in Javascript</h2>
-    <p>Here is your Tamagati! Please give it a name here:</p>
-    <!-- <input class"form-control" type -->
-    <textarea
-      name="petName"
-      class="form-control"
-      cols="15"
-      placeholder="Elvis"
-      value=""
-    ></textarea>
-    <button type="submit" class= "button" onclick="alert(petName)" class="ntm btn-primary">
-      Submit name
-    </button>
+    <h2 class="welcome">Welcome, to Tamagotchi in Javascript</h2>
+    <div>
+      <p>Here is your Tamagati!</p>
+      <p>Please give it a name here:</p>
 
+      <!-- <input class"form-control" type -->
+      <input id="userInput" class="input" />
+      <button onclick="name_()">Submit name</button>
+
+      <h2 id="message"></h2>
+      <!-- I want to send a message once someone has entered an input -->
+    </div>
     <!-- I want to pull the information from the tet form above and use it in a sentence//Like "Welcome! Here is your pet, "  + petName+" -->
   </body>
-  <script src="main.js"></script>
+  <script>
+    function name_() {
+      let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
+      let message = document.querySelector("#message"); //Now I want to capture the message
+
+      message.innerText = "Introducing, " + userInput.value;
+    }
+  </script>
 </html>

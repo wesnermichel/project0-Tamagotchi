@@ -1,7 +1,4 @@
-console.log () .background {
-  color: blue;
-}
-h2 {
+console.log () h2 {
   text-align: center;
 }
 
@@ -15,4 +12,18 @@ textarea {
 
 .button {
   text-align: center;
+}
+
+.welcome {
+  text-align: center;
+}
+
+div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+input {
+
 }
