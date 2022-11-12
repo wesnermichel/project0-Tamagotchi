@@ -1,0 +1,9 @@
+// Allow user to give the pet a name a
+Following instructions for https://seir1031-materials.notion.site/Tamagotchi-Game-5907d71212c949b2bb7002dfbee9ff47
+Things to consider Hunger, Sleeping, Boredom, Age
+Display a character of your choice on the screen to represent your pet
+
+
+/// we will need to use If statements for when the user clicks on feed, lights turn off, players
+//We will also need to calculate pets age ( I am thinking a simple timer, with a loop function? Anh when XYZ is === random number I permit, it, sadly dies??)
+// EVENT LISTENER , I have to know how many times, 1 click 2 clicks etc//Should I limit how many times a person can click or am I over complicating things?

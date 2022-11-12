@@ -1,0 +1,1 @@
+I would like the user to enter the game, prove a name for their pet, and interact with their pet to prevent it from dying. 
