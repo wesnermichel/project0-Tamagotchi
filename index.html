@@ -17,7 +17,7 @@
       <!-- <input class"form-control" type -->
       <input id="userInput" class="input" />
       <!-- Hit a wall using "name" so I changed it to "user_", but later changed it to petName" -->
-      <button onclick="name_()">Submit name</button> 
+      <button onclick="petName()">Submit name</button>
 
       <h2 id="message"></h2>
       <!-- I want to send a message once someone has entered an input -->
@@ -29,6 +29,8 @@
     <button>Feed</button>
     <button>Lights Off</button>
     <button>Play</button>
+    <!-- //Everytime someone clicks this button I want the number to go up -->
+    <button onclick="(petAge())">Age</button>
 
     <div>Hunger <span id="hunger"> </span></div>
     <div>Sleepiness <span id="sleep"></span></div>
@@ -44,7 +46,7 @@
     // I am creating this statment to say that I want the current Age to start off @ 1
     let currentAge = 0;
 
-    function name_() {
+    function petName() {
       let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
       let message = document.querySelector("#message"); //Now I want to capture the message
 
@@ -60,8 +62,9 @@
     function play() {}
 
     function petAge(currentAge) {
-      age = currentAge + 1;
-      return age; //I am asking the browser to add plus one
+      pet = currentAge + 1;
+      age.innerText = "You're pets current age is " + pet;
+      // return age; //I am asking the browser to add plus one
     }
   </script>
 </html>
