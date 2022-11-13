@@ -21,14 +21,33 @@
       <h2 id="message"></h2>
       <!-- I want to send a message once someone has entered an input -->
     </div>
+
     <!-- I want to pull the information from the tet form above and use it in a sentence//Like "Welcome! Here is your pet, "  + petName+" -->
+    -
+    <!-- - Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. -->
+    <button>Feed</button>
+    
+    <button>Lights Off</button>
+    <button>Play</button>
   </body>
   <script>
     function name_() {
       let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
       let message = document.querySelector("#message"); //Now I want to capture the message
 
-      message.innerText = "Introducing, " + userInput.value;
+      message.innerText =
+        " Sounds good! Introducing, your pet,  " + userInput.value;
+    }
+
+    function feed(){
+
+    }
+    function lightOff(){
+
+    }
+
+    function play(){
+  
     }
   </script>
 </html>
