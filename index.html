@@ -29,12 +29,17 @@
     <button>Lights Off</button>
     <button>Play</button>
 
-    <div>Hunger</div>
-    <div>Sleepiness</div>
-    <div>Boredom</div>
-    <div>Age</div>
+    <div>Hunger <span id="hunger"> </span></div>
+    <div>Sleepiness <span id="sleep"></span></div>
+    <div>Bored <span id="bored"></span></div>
+    <div>Age <span id="age"></span></div>
   </body>
   <script>
+    const hunger = document.getElementById("hunger");
+    const sleep = document.getElementById("sleep");
+    const bored = document.getElementById("bored");
+    const age = document.getElementById("age");
+
     function name_() {
       let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
       let message = document.querySelector("#message"); //Now I want to capture the message
@@ -43,7 +48,9 @@
         " Sounds good! Introducing, your pet,  " + userInput.value;
     }
 
-    function feed() {}
+    function feed() {
+      let hunger = document.getElementById("hunger");
+    }
     function lightOff() {}
 
     function play() {}
