@@ -16,7 +16,8 @@
 
       <!-- <input class"form-control" type -->
       <input id="userInput" class="input" />
-      <button onclick="name_()">Submit name</button>
+      <!-- Hit a wall using "name" so I changed it to "user_", but later changed it to petName" -->
+      <button onclick="name_()">Submit name</button> 
 
       <h2 id="message"></h2>
       <!-- I want to send a message once someone has entered an input -->
@@ -35,10 +36,13 @@
     <div>Age <span id="age"></span></div>
   </body>
   <script>
+    //here we are setting up the functions to getElements by Ids
     const hunger = document.getElementById("hunger");
     const sleep = document.getElementById("sleep");
     const bored = document.getElementById("bored");
     const age = document.getElementById("age");
+    // I am creating this statment to say that I want the current Age to start off @ 1
+    let currentAge = 0;
 
     function name_() {
       let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
@@ -54,5 +58,10 @@
     function lightOff() {}
 
     function play() {}
+
+    function petAge(currentAge) {
+      age = currentAge + 1;
+      return age; //I am asking the browser to add plus one
+    }
   </script>
 </html>
