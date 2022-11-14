@@ -35,14 +35,14 @@
     <div>Hunger <span id="hunger"> </span></div>
     <div>Sleepiness <span id="sleep"></span></div>
     <div>Bored <span id="bored"></span></div>
-    <div>Age <span id="age"></span></div>
+    <div>Age <span id="age"> 0</span></div>
   </body>
   <script>
     //here we are setting up the functions to getElements by Ids
-    const hunger = document.getElementById("hunger");
-    const sleep = document.getElementById("sleep");
-    const bored = document.getElementById("bored");
-    const age = document.getElementById("age");
+    let hunger = document.getElementById("hunger");
+    let sleep = document.getElementById("sleep");
+    let bored = document.getElementById("bored");
+    let age = document.getElementById("age");
     // I am creating this statment to say that I want the current Age to start off @ 1
 
     function petName() {
@@ -56,15 +56,27 @@
     function feed() {
       let hunger = document.getElementById("hunger");
     }
-    function lightOff() {}
+    function lightOff() {
+      let lightOff = document.getElementById("lightOff");
+    }
 
     function play() {}
 
-    function petAge(currentAge) {
-      pet = currentAge + 1;
-      age.innerText = "You're pets current age is " + pet;
+    function petAge() {
+      age.innerHTML = age.value;
+
       // return age; //I am asking the browser to add plus one
     }
-    console.log(currentAge + "");
+    console.log(petAge());
+    function timeInterval() {
+      //timeInterval2=// trying to create a system that cancels player when === 0, 0=== dead
+    }
+
+    const button = document.getElementById("hunger"),
+      count = 0;
+    button.onclick = function () {
+      count += 1;
+      button.innerHTML = count;
+    };
   </script>
 </html>
