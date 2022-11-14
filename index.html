@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Tamagotchi Game : Javascript Style</title>
+    <script src='main.js'></script>
     <!-- title that comes on browser -->
   </head>
   <body>
@@ -17,66 +18,26 @@
       <!-- <input class"form-control" type -->
       <input id="userInput" class="input" />
       <!-- Hit a wall using "name" so I changed it to "user_", but later changed it to petName" -->
-      <button onclick="petName(1)">Submit name</button>
+      <button onclick="createNewPet()">Submit name</button>
 
       <h2 id="message"></h2>
       <!-- I want to send a message once someone has entered an input -->
     </div>
 
     <!-- I want to pull the information from the tet form above and use it in a sentence//Like "Welcome! Here is your pet, "  + petName+" -->
-    -
+    
     <!-- - Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. -->
-    <button>Feed</button>
-    <button>Lights Off</button>
-    <button>Play</button>
-    <!-- //Everytime someone clicks this button I want the number to go up -->
-    <button onclick="alert((petAge(currentAge)))">Age</button>
+    <div class="button_row">
+      <button>Feed</button>
+      <button>Lights Off</button>
+      <button>Play</button>
+      <!-- //Everytime someone clicks this button I want the number to go up -->
+      <button onclick="updateTamagotchiAge()">Age</button>
+    </div>
 
     <div>Hunger <span id="hunger"> </span></div>
     <div>Sleepiness <span id="sleep"></span></div>
     <div>Bored <span id="bored"></span></div>
-    <div>Age <span id="age"> 0</span></div>
+    <div>Age <span id="age">0</span></div>
   </body>
-  <script>
-    //here we are setting up the functions to getElements by Ids
-    let hunger = document.getElementById("hunger");
-    let sleep = document.getElementById("sleep");
-    let bored = document.getElementById("bored");
-    let age = document.getElementById("age");
-    // I am creating this statment to say that I want the current Age to start off @ 1
-
-    function petName() {
-      let userInput = document.querySelector("#userInput"); //Now I want to capture the input, could have used getelement I think too
-      let message = document.querySelector("#message"); //Now I want to capture the message
-
-      message.innerText =
-        " Sounds good! Introducing, your pet,  " + userInput.value;
-    }
-
-    function feed() {
-      let hunger = document.getElementById("hunger");
-    }
-    function lightOff() {
-      let lightOff = document.getElementById("lightOff");
-    }
-
-    function play() {}
-
-    function petAge() {
-      age.innerHTML = age.value;
-
-      // return age; //I am asking the browser to add plus one
-    }
-    console.log(petAge());
-    function timeInterval() {
-      //timeInterval2=// trying to create a system that cancels player when === 0, 0=== dead
-    }
-
-    const button = document.getElementById("hunger"),
-      count = 0;
-    button.onclick = function () {
-      count += 1;
-      button.innerHTML = count;
-    };
-  </script>
 </html>
